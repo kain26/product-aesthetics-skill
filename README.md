@@ -1,7 +1,7 @@
 <h1 align="center">Product Aesthetics</h1>
 <p align="center"><strong>Ship the product. Let your agent inspect the experience.</strong></p>
 <p align="center">Browser-driven aesthetics audits for Codex &amp; Claude Code.<br/>0–100 scores · Evidence-backed issues · Prioritized fixes</p>
-<p align="center"><a href="#quick-start">Quick start</a> · <a href="#how-it-works">Workflow</a> · <a href="#scoring">Scoring</a> · <a href="#field-test">Field tests</a> · <a href="#requirements">Requirements</a></p>
+<p align="center"><a href="#quick-start">Quick start</a> · <a href="#how-it-works">Workflow</a> · <a href="#scoring">Scoring</a> · <a href="#field-test">Field test</a> · <a href="#requirements">Requirements</a></p>
 
 
 ## Your agent does the inspection
@@ -218,58 +218,6 @@ It is useful when a product already has a point of view and the remaining work i
 
 It is not a conversion model and not a launch sign-off. 80 still means localized gaps. A later audit with a different route list should not be subtracted from 65 as if the scopes were identical.
 
-## Field test: setups.myspx.trade
-
-Second product, same rubric, no code changes. [setups.myspx.trade](https://setups.myspx.trade) on 2026-10-05. Viewports 1440×900 and 390×844. Journey: the English index, the 中文 index, setup 01 (Sweep & Reclaim), and setup 03 (VWAP Pullback), including the teaching diagram. Not opened: the other four playbooks, Discord, or X.
-
-**82/100** (80–89, polished with localized gaps). Confidence medium. Observed weight 100. This is not a before/after. Nothing on the site was edited after the score.
-
-| Dimension | Weight | Score |
-|---|---:|---:|
-| Purpose and task clarity | 15 | 4 |
-| Visual hierarchy | 20 | 5 |
-| Typography | 15 | 4 |
-| Color and material | 10 | 4 |
-| Component consistency | 15 | 4 |
-| Interaction and feedback | 10 | 3 |
-| Responsive and inclusive | 10 | 4 |
-| Brand coherence | 5 | 4 |
-
-The index already does the job the rubric is looking for. One line says read 5m and execute 1m. The next line says the six setups are experimental, have no validated win rate, and are not entries. Setup pages repeat regime, time window, the 5m read, the 1m trigger, entry, stop, target, and a skip rule. Hierarchy is the one dimension at 5.
-
-| Priority | Where | Evidence |
-|---|---|---|
-| P1 | Playbook, including `?lang=en` | The English index is English. Setup 01 and setup 03 stay Chinese (292 and 244 CJK characters on those pages). The procedure you would follow is not in the language you selected |
-| P2 | Keyboard | Tab on the playbook: `outline-style: none` |
-| P2 | 390px header | “6 Setups” and “Lab” are not laid out (0×0). Discord and X icons are 32×32 |
-| P2 | Paper surfaces | Secondary ink at 64% opacity measures about 3.8:1. Rust labels around 10px measure about 3.5:1. Body copy at 82% opacity is about 6.3:1 |
-
-No horizontal overflow at 390px. The diagram reflows into stacked rows.
-
-### The index
-
-![English homepage: Read 5m. Execute 1m.](assets/case-setups/home-desktop.jpg)
-
-### The page the index sends you to
-
-Same session, English mode. The steps are Chinese.
-
-![Setup 01 playbook, still Chinese](assets/case-setups/playbook-desktop.jpg)
-
-### Phone
-
-The list still reads as six setups. The header no longer offers Lab.
-
-![Homepage at 390px](assets/case-setups/home-mobile.jpg)
-
-The diagram is a schematic, not a chart pretending to be a live tape, and it fits the width.
-
-![5m / 1m diagram at 390px](assets/case-setups/playbook-diagram-mobile.jpg)
-
-### What the second test adds
-
-The rubric does not push every product toward a low score. setups.myspx.trade lands at 82 because the page order, the disclaimer, and the type already agree. The useful output is the narrow miss: the language toggle covers the index and not the playbook. A review that only said “make the editorial design nicer” would have missed the only P1.
-
 ## Requirements
 
 Your agent needs a permitted runtime for local startup, browser tools, and screenshot inspection. This skill defines their use; it does not bundle a browser, provision hosting, or provide credentials. Dependency setup follows the project and host's authorization rules.
@@ -285,9 +233,8 @@ Scores are structured judgments, not objective measurements, conversion predicti
 - [Report format](skills/product-aesthetics/references/report.md)
 - [SVG workflow](assets/workflow.svg)
 
-- [Field test screenshots, myspx.trade](assets/case-myspx/)
-- [Field test screenshots, setups.myspx.trade](assets/case-setups/)
+- [Field test screenshots](assets/case-myspx/)
 
 ## Validation status
 
-Skill structure has been validated. An earlier source-only scenario was independently checked to ensure no visual score was invented. On 2026-10-05 the browser path was used on two live products. myspx.trade was inspected, scored, changed, and re-opened. setups.myspx.trade was inspected and scored only. See [Field test](#field-test) and [setups.myspx.trade](#field-test-setupsmyspxtrade). Neither run has been repeated in Claude Code, and two products do not calibrate the rubric for every category. Shared format compatibility does not guarantee identical model scores.
+Skill structure has been validated. An earlier source-only scenario was independently checked to ensure no visual score was invented. On 2026-10-05 the browser path was used end to end on myspx.trade: inspect, score, implement the named fixes, and re-open the same routes. See [Field test](#field-test). That run has not been repeated in Claude Code, and one product does not calibrate the rubric for every category. Shared format compatibility does not guarantee identical model scores.
