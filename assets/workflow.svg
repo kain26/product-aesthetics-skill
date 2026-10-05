@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="760" viewBox="0 0 960 760" role="img" aria-labelledby="t d">
+<title id="t">Product Aesthetics Workflow</title>
+<desc id="d">Local project and remote URL merge into the agent, which runs browser inspection and captures evidence. Evidence enters a rubric-based review, producing a score and fixes. Optional re-audit returns to browser inspection.</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1 1L7 4L1 7" fill="none" stroke="#172554" stroke-width="1.4"/></marker><style>text{font-family:Arial,Helvetica,sans-serif;font-size:19px;font-weight:500;fill:#172554;text-anchor:middle;dominant-baseline:middle}.node{fill:#FFFFFF;stroke:#172554;stroke-width:1.5}.line{fill:none;stroke:#172554;stroke-width:1.5;marker-end:url(#a)}.dark{fill:#172554;stroke:#172554;stroke-width:1.5}.white{fill:#FFFFFF}.accent{fill:#DBEAFE;stroke:#172554;stroke-width:1.5}</style></defs>
+<rect width="960" height="760" fill="#FFFFFF"/>
+<text x="480" y="54" style="font-size:27px;font-weight:600">Product Aesthetics</text>
+<rect x="190" y="104" width="240" height="62" rx="8" class="node"/><text x="310" y="135">Local project</text>
+<rect x="530" y="104" width="240" height="62" rx="8" class="node"/><text x="650" y="135">Remote URL</text>
+<path d="M310 166V192H480M650 166V192H480V222" class="line"/>
+<rect x="360" y="222" width="240" height="62" rx="8" class="dark"/><text x="480" y="253" class="white">Agent · Start / connect</text>
+<path d="M480 284V326" class="line"/>
+<rect x="360" y="326" width="240" height="62" rx="8" class="node"/><text x="480" y="357">Browser inspection</text>
+<path d="M480 388V430" class="line"/>
+<rect x="360" y="430" width="240" height="62" rx="8" class="node"/><text x="480" y="461">Capture evidence</text>
+<path d="M480 492V534" class="line"/>
+<rect x="360" y="534" width="240" height="62" rx="8" class="dark"/><text x="480" y="565" class="white">Review · 8 dimensions</text>
+<path d="M480 596V622H310V652" class="line"/><path d="M480 622H650V652" class="line"/>
+<rect x="190" y="652" width="240" height="62" rx="8" class="accent"/><text x="310" y="683">Score · 0–100</text>
+<rect x="530" y="652" width="240" height="62" rx="8" class="accent"/><text x="650" y="683">Prioritized fixes</text>
+<path d="M770 683H842V357H600" class="line" stroke-dasharray="5 5"/>
+<text x="842" y="521" transform="rotate(-90 842 521)" style="font-size:16px;paint-order:stroke;stroke:#FFFFFF;stroke-width:12px;stroke-linejoin:round">Fix &amp; re-audit · optional</text>
+</svg>

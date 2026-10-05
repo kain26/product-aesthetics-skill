@@ -1,0 +1,14 @@
+interface:
+  display_name: Product Aesthetics
+  short_description: Score product aesthetics with evidence and actionable fixes
+  default_prompt: Use $product-aesthetics to audit this product, score it out of 100,
+    and prioritize concrete improvements.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
